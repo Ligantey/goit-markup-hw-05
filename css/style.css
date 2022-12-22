@@ -222,6 +222,16 @@ opacity: 1;
 transition-timing-function: var(--animate);
 }
 
+.smartphone {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.phone-item {
+  fill: var(--title-text-color);
+  color: var(--title-text-color);
+}
+
 .phone-item:hover,
 .phone-item:focus {
   color: var(--hover-color);
@@ -229,17 +239,6 @@ transition-timing-function: var(--animate);
   transition-duration: var(--time);
 transition-timing-function: var(--animate);
 }
-
-.smartphone {
-  margin-right: 10px;
-  cursor: pointer;
-}
-
-.phone {
-  color: var(--title-text-color);
-  cursor: pointer;
-  }
-
 
 /* --- main --- */
 

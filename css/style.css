@@ -231,7 +231,6 @@ transition-timing-function: var(--animate);
 }
 
 .smartphone {
-  fill: var(--title-text-color);
   margin-right: 10px;
   cursor: pointer;
 }
@@ -599,6 +598,7 @@ transition-timing-function: var(--animate);
   fill: var(--pramyre-text-color);
   transition-duration: var(--time);
 transition-timing-function: var(--animate);
+border-radius: 50%;
   }
 
 /* --- ПОСТІЙНІ КЛІЄНТИ --- */

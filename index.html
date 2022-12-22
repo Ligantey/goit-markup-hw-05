@@ -34,10 +34,11 @@
               </a>
             </li>
           </ul>
+        
           <ul class="site-nav">
-            <li><a href="Студія" class="link current" >Студія</a></li>
-            <li><a href="./portfolio.html" class="link">Портфоліо</a></li>
-            <li><a href="Контакти" class="link">Контакти</a></li>
+            <li><a href="Студія" class="site-nav-item link current" >Студія</a></li>
+            <li><a href="./portfolio.html" class="site-nav-item link">Портфоліо</a></li>
+            <li><a href="Контакти" class="site-nav-item link">Контакти</a></li>
           </ul>
           <ul class="auth-nav">
             <li class="auth-nav-item">
@@ -126,16 +127,16 @@
           <h2 class="caption">Чим ми займаємося</h2>
           <ul class="subject-img">
             <li class="subject-item">
-              <img src="./images/img1.jpg" alt="робочий_стіл" width="370" height="294" />
+              <img src="./images/img1.jpg" alt="робочий_стіл" width="370" height="294"/>
                   <p class="subject-link">Десктопні додатки</p>
-             </li>
+            </li>
             <li class="subject-item">
-              <img src="./images/img2.jpg" alt="ноутбук" width="370" height="294" />
+              <img src="./images/img2.jpg" alt="ноутбук" width="370" height="294"/>
             <p class="subject-link">Мобільні додатки</p>
 
             </li>
             <li class="subject-item">
-              <img src="./images/img3.jpg" alt="планшет" width="370" height="294" />
+              <img src="./images/img3.jpg" alt="планшет" width="370" height="294"/>
               <p class="subject-link">Дизайнерські рішення</p>
 
             </li>
@@ -407,7 +408,7 @@
           </ul>
         </div>
         <div class="about-icons">
-          <h3 class="text-items">приєднуйтесь112233</h3>
+          <h3 class="text-items">приєднуйтесь</h3>
           <ul class="studio-soc-list list">
             <li class="studio-soc-items">
               <a href="#" class="icons-link link">
@@ -442,5 +443,20 @@
         </div>
       </div>
     </footer>
+
+     <!-- Вся твоя розмітка, включно з розміткою модалки -->
+    <button type="button" class="open-modal" data-modal-open>Замовити послугу</button>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <p></p>
+        <a href="#" class="modal-link link" data-modal-close>
+          <svg class="modal-icons" width="18" height="18">
+            <use href="./images/icons.svg#icon-close-black"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+      <!-- Ставимо перед закриваючим тегом body -->
+    <script src="./js/modal.js"></script>
   </body>
 </html>

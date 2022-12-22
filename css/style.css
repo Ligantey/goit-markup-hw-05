@@ -7,9 +7,7 @@
   --hover-color: #2196F3;
   --moz-box-sizing: border-box;
   --main-font: Roboto, Raleway, 'Gill Sans', sans-serif;
-
-  --time: 250ms;
-  --animate: cubic-bezier(0.4, 0, 0.2, 1);
+  --animate: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
 }
 
@@ -143,8 +141,7 @@ header {
 .link.current {
   color: var(--hover-color);
   border-radius: 2px;
-  transition-duration: var(--time);
-transition-timing-function: var(--animate);
+ transition: transform var(--animate);
 }
 
 .site-nav-item {
@@ -173,6 +170,7 @@ transition-timing-function: var(--animate);
 
 .current:hover::after {
 opacity: 1;
+transition: transform var(--animate);
 }
 
 .link,
@@ -200,7 +198,7 @@ opacity: 1;
 
 .auth-nav-item {
   display: flex;
-  justify-content: baseline;
+  justify-content: center;
   align-items: baseline;
 }
 
@@ -218,8 +216,7 @@ opacity: 1;
 .mail-item:focus {
   color: var(--hover-color);
   fill: var(--hover-color);
-  transition-duration: var(--time);
-transition-timing-function: var(--animate);
+  transition: transform var(--animate);
 }
 
 .smartphone {
@@ -236,8 +233,7 @@ transition-timing-function: var(--animate);
 .phone-item:focus {
   color: var(--hover-color);
   fill: var(--hover-color);
-  transition-duration: var(--time);
-transition-timing-function: var(--animate);
+  transition: transform var(--animate);
 }
 
 /* --- main --- */
@@ -300,21 +296,19 @@ transition-timing-function: var(--animate);
 }
 
 .button-name {
-  font-weight: 700px;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.88px;
 
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 32px;
-  padding-right: auto;
 }
 
 .button:hover,
 .button:focus {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  transition-duration: var(--time);
-transition-timing-function: var(--animate);
+  transition: transform var(--animate);
 }
 
 /* --- УВАГА ДО ДЕТАЛЕЙ --- */
@@ -595,9 +589,8 @@ transition-timing-function: var(--animate);
   background-color: var(--hover-color);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   fill: var(--pramyre-text-color);
-  transition-duration: var(--time);
-transition-timing-function: var(--animate);
-border-radius: 50%;
+ border-radius: 50%;
+ transition: transform var(--animate);
   }
 
 /* --- ПОСТІЙНІ КЛІЄНТИ --- */
@@ -644,8 +637,7 @@ border-radius: 50%;
   border: 1px solid var(--hover-color);
   border-radius: 4px;
   fill: var(--hover-color);
-  transition-duration: var(--time);
-transition-timing-function: var(--animate);
+  transition: transform var(--animate);
 }
 
 /* --- footer --- */
@@ -660,7 +652,6 @@ footer {
 
 footer > .container {
   display: flex;
-  justify-content: baseline;
   align-items: baseline;
 
   margin-left: auto;
@@ -775,8 +766,6 @@ footer > .container {
   background-color: var(--hover-color);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 50%;
-  transition-duration: var(--time);
-transition-timing-function: var(--animate);
 
 }
 
@@ -834,9 +823,10 @@ transition-timing-function: var(--animate);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-transition-duration: var(--time);
-transition-timing-function: var(--animate);
+  transition: transform var(--animate);
 }
+
+/* --- OUR PORTFOLIO --- */
 
 .card-set {
   display: flex;
@@ -847,40 +837,40 @@ transition-timing-function: var(--animate);
   margin: 0;
   list-style: none;
   margin: auto;
-  outline: 1px #eeeeee;
 }
 
-.items {
-  position: relative;
+.card-items {
   overflow: hidden;
-
   width: 370px;
+  margin-top: 30px;
+  margin-left: 30px;
 
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
+ }
 
-  margin-left: 30px;
-  margin-top: 30px;
-}
-
-.items:hover,
-.items:focus {
+.card-items:hover,
+.card-items:focus {
   background: var(--pramyre-text-color);
   border: 1px solid #eeeeee;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-    transition-duration: var(--time);
-transition-timing-function: var(--animate);
+    transition: transform var(--animate);
 }
 
 .card-thumb > img {
   overflow: hidden;
 }
 
+.card-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
 .card-set > .two,
 .card-set > .three {
-  margin-top: 30px;
+  margin-left: 30px;
   margin-top: 0;
 }
 
@@ -923,21 +913,19 @@ transition-timing-function: var(--animate);
 
 /* --- ПОРТФОЛІО ВИПАДАЮЧЕ ВІКНО --- */
 
-.box-subcard {
-display: block;
+.card-overlay-text {
+position: absolute;
 
-left: 0;
 top: 0;
-width: 100%;
-margin: 0;
-padding: 0;
+left: 0;
+width:100%;
+height: 100%;
 
-color: #FFFFFF;
-background-color: rgba(33, 150, 243, 0.9);
-}
+padding-top: 63px;
+padding-right: 24px;
+padding-bottom: 63px;
+padding-left: 24px;
 
-.subcard {
-/* --- tag <a> --- */
 font-family: 'Roboto';
 font-style: normal;
 font-weight: 400;
@@ -945,113 +933,87 @@ font-size: 18px;
 line-height: 1.56;
 letter-spacing: 0.03em;
 text-decoration: none;
-color: #FFFFFF;
+color: var(--pramyre-text-color);
+background-color: rgba(33, 150, 243, 0.9);
+
+transform: translateY(100%);
+opacity: 1;
+transition: transform 250ms var(--animate);
 }
 
-.items:hover .box-subcard,
-.items:focus .box-subcard {
-transform: translateY(-100%);
+.card-items:hover .card-overlay-text,
+.card-items:focus .card-overlay-text {
+transform: translateY(0);
 } 
-
-.overlay {
-  position: absolute;
-
-  top: 0;
-  left: 0;
-width: 100%;
-
-padding-top: 63px;
-padding-right: 24px;
-padding-bottom: 63px;
-padding-left: 24px;
-margin: 0;
-
-  background-color: rgba(33, 150, 243, 0.9);
- 
-
-  transition-duration: var(--time);
-  transition-timing-function: var(--animate);
-  /* 
-
-.site-item:hover .thumb-text, .site-item:focus .thumb-text {
-    transform: translateY(-100%);
-}
-.thumb-text {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-
-    transition: transform var(--animate);
- */
-  
- }
 
  /* --- MODAL WINDOW --- */
 
-.backdrop .is-hidden {
+.is-hidden {
   /* скриваємо вікно */
-  visibility: collapse;
+  visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
 
 .backdrop {
+   /* прописуємо у % щоб займало весь контейнер */
   position: fixed;
-  margin-top: 221px;
-  margin-right: auto;
-  margin-left: auto;
-
   top: 0;
   left: 0;
-  width: 528px;
-  height: 581px;
-  background-color: var(--pramyre-text-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-   0px 1px 1px rgba(0, 0, 0, 0.14), 
-   0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
 
+  transition: opacity 250ms linear, visibility 250ms linear;
+
+}
+
+ .backdrop.is-hidden.modal {
+transform: translate(-50%, -50%) scale(0);
+border-radius: 50%;
  }
-
- .backdrop:hover {
-  box-shadow:  rgba(0, 0, 0, 0.2);
- } 
 
  .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50% -50%);
+  transform: translate(-50%, -50%);
 
-  min-width:  528px;
+  width: 528px;
   min-height: 581px;
   background-color: var(--pramyre-text-color);
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 4px;
+
+transition: transform 250ms linear;
 
  }
 
- .modal-link {
+ .modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+
   display: flex;
   justify-content: center;
   align-items: center;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 50%;
-  /* прописуємо у % щоб займало весь контейнер */
- width: 30px;
-height: 30px;
-margin-top: 8px;
-margin-right: 8px;
 
 background-color: var(--pramyre-text-color);
 border: 1px solid rgba(0, 0, 0, 0.1);
+border-radius: 50%;
  color: #000000;
 
- outline: 2px solid red;
+ transition: transform 250ms linear;
+
 
 }
 
-
- .modal-link:hover {
+.modal-icons:hover,
+.modal-close:hover {
   border-radius: 50%;
- }
+}

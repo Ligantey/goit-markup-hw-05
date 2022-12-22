@@ -65,7 +65,7 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="button" name="button" style="width: 216px; height: 50px">
+          <button type="button" class="button modal-open" data-modal-open name="button" style="width: 216px; height: 50px">
             <span class="button-name">Замовити послугу</span>
           </button>
         </div>
@@ -445,11 +445,9 @@
     </footer>
 
      <!-- Вся твоя розмітка, включно з розміткою модалки -->
-    <button type="button" class="open-modal" data-modal-open>Замовити послугу</button>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <p></p>
-        <a href="#" class="modal-link link" data-modal-close>
+        <a href="#" class="modal-close link" data-modal-close>
           <svg class="modal-icons" width="18" height="18">
             <use href="./images/icons.svg#icon-close-black"></use>
           </svg>

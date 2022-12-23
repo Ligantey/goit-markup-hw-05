@@ -62,7 +62,7 @@ a,
 .auth-nav {
   text-decoration: none;
   list-style: none;
- }
+}
 
 .container {
   width: 1200px;
@@ -96,13 +96,14 @@ header {
 }
 
 .logo {
+  display: inline-flex;
+
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  display: inline-flex;
 }
 
 .logo > div {
@@ -141,7 +142,10 @@ header {
 .link.current {
   color: var(--hover-color);
   border-radius: 2px;
- transition: transform var(--animate);
+}
+
+.link {
+  transition: transform var(--animate), color var(--animate);
 }
 
 .site-nav-item {
@@ -189,7 +193,6 @@ transition: transform var(--animate);
   margin-left: auto;
   justify-content: center;
   align-items: baseline;
-
 }
 
 .auth-nav > li:not(:last-child) {
@@ -205,35 +208,37 @@ transition: transform var(--animate);
 .envelope {
   margin-right: 10px;
   cursor: pointer;
+  transition: color var(--animate);
 }
 
 .mail-item {
   fill: var(--title-text-color);
   color: var(--title-text-color);
+  transition: color var(--animate);
 }
 
 .mail-item:hover,
 .mail-item:focus {
   color: var(--hover-color);
   fill: var(--hover-color);
-  transition: transform var(--animate);
 }
 
 .smartphone {
   margin-right: 10px;
   cursor: pointer;
+  transition: color var(--animate);
 }
 
 .phone-item {
   fill: var(--title-text-color);
   color: var(--title-text-color);
+  transition: color var(--animate);
 }
 
 .phone-item:hover,
 .phone-item:focus {
   color: var(--hover-color);
   fill: var(--hover-color);
-  transition: transform var(--animate);
 }
 
 /* --- main --- */
@@ -293,6 +298,8 @@ transition: transform var(--animate);
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+
+  transition:  background-color var(--animate), color var(--animate), box-shadow var(--animate);
 }
 
 .button-name {
@@ -308,7 +315,6 @@ transition: transform var(--animate);
 .button:hover,
 .button:focus {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  transition: transform var(--animate);
 }
 
 /* --- УВАГА ДО ДЕТАЛЕЙ --- */
@@ -321,12 +327,12 @@ transition: transform var(--animate);
 }
 
 .container .sub-container {
-  padding-left: 15px;
-  padding-right: 15px;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .sub-list:not(:last-child) {
@@ -337,7 +343,7 @@ transition: transform var(--animate);
   background: #f5f4fa;
   border-radius: 4px;
 }
-
+/* --- ПРИХОВУЄМО ЗАГОЛОВОК за допомогою visually-hidden --- */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -353,16 +359,16 @@ transition: transform var(--animate);
 }
 
 .title-icon {
-  height: 120px;
-  margin-bottom: 30px;
-  border-radius: 4px;
-
   display: flex;
   justify-content: center;
   align-items: center;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+
+  height: 120px;
+  margin-bottom: 30px;
+  border-radius: 4px;
 }
 
 .subtitle {
@@ -383,7 +389,7 @@ transition: transform var(--animate);
   letter-spacing: 0.03em;
 }
 
-/* --- Чим ми займаємося --- */
+/* --- ЧИМ МИ ЗАЙМАЄМОСЯ --- */
 
 .subject {
   margin-left: auto;
@@ -425,13 +431,10 @@ transition: transform var(--animate);
   left: 0;
   bottom: 0;
  
-  background: rgba(47, 48, 58, 0.8);
-
   margin: 0;
   padding-top: 27px;
   padding-bottom: 27px;
   
-
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
@@ -442,15 +445,17 @@ transition: transform var(--animate);
   text-transform: uppercase;
   
   color: var(--pramyre-text-color);
+  background: rgba(47, 48, 58, 0.8);
   }
 
 
 /* --- НАША КОМАНДА --- */
 
 .team {
-  background: #f5f4fa;
   margin-left: auto;
   margin-right: auto;
+
+  background: #f5f4fa;
 }
 
 .team > .container {
@@ -459,8 +464,12 @@ transition: transform var(--animate);
 }
 
 .caption-team {
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
@@ -469,21 +478,17 @@ transition: transform var(--animate);
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--accent-color);
-
-  margin-bottom: 50px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .subject-images {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
   margin-left: auto;
   margin-right: auto;
   align-items: center;
   text-align: center;
-
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
 }
 
 .worker {
@@ -520,6 +525,9 @@ transition: transform var(--animate);
 }
 
 .text {
+  margin-top: 30px;
+  margin-bottom: 10px;
+
   font-family: 'Roboto';
   font-style: normal;
 
@@ -529,12 +537,11 @@ transition: transform var(--animate);
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--accent-color);
-
-  margin-top: 30px;
-  margin-bottom: 10px;
 }
 
 .text-job {
+  margin-bottom: 16px;
+
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
@@ -544,7 +551,6 @@ transition: transform var(--animate);
   letter-spacing: 0.03em;
 
   color: var(--title-text-color);
-  margin-bottom: 16px;
 }
 
 /* --- studio-soc-list --- */
@@ -570,18 +576,20 @@ transition: transform var(--animate);
 }
 
 .studio-soc-link {
-  /* прописуємо у % щоб займало весь контейнер */
-  width: 100%;
-  height: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
+
+    /* прописуємо у % щоб займало весь контейнер */
+    width: 100%;
+    height: 100%;
+
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 50%;
   fill: #AFB1B8;
+  transition: background-color var(--animate), filter var(--animate), color var(--animate) ;
   }
 
 .studio-soc-link:hover,
@@ -590,8 +598,7 @@ transition: transform var(--animate);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   fill: var(--pramyre-text-color);
  border-radius: 50%;
- transition: transform var(--animate);
-  }
+ }
 
 /* --- ПОСТІЙНІ КЛІЄНТИ --- */
 
@@ -630,6 +637,7 @@ transition: transform var(--animate);
   fill: #AFB1B8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition: color var(--animate), border var(--animate);
 }
 
 .client-link:hover,
@@ -637,17 +645,16 @@ transition: transform var(--animate);
   border: 1px solid var(--hover-color);
   border-radius: 4px;
   fill: var(--hover-color);
-  transition: transform var(--animate);
 }
 
-/* --- footer --- */
+/* --- FOOTER --- */
 
 footer {
-  background: #2f303a;
-
+  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1600px;
+
+  background: #2f303a;
 }
 
 footer > .container {
@@ -759,6 +766,7 @@ footer > .container {
   height: 100%;
 
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color var(--animate), filter var(--animate), color var(--animate);
 }
 
 .icons-link:hover,
@@ -766,7 +774,6 @@ footer > .container {
   background-color: var(--hover-color);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 50%;
-
 }
 
 .soc-icons {
@@ -810,6 +817,7 @@ footer > .container {
 
   cursor: pointer;
   margin-right: 8px;
+transition: background-color var(--animate), color var(--animate), box-shadow var(--animate) ;
 }
 
 .button-list:not(:last-child) {
@@ -823,7 +831,6 @@ footer > .container {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  transition: transform var(--animate);
 }
 
 /* --- OUR PORTFOLIO --- */
@@ -848,15 +855,16 @@ footer > .container {
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
+
+  transition: background-color var(--animate), border var(--animate), box-shadow var(--animate) ;
  }
 
 .card-items:hover,
 .card-items:focus {
-  background: var(--pramyre-text-color);
+  background-color: var(--pramyre-text-color);
   border: 1px solid #eeeeee;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-    transition: transform var(--animate);
 }
 
 .card-thumb > img {
@@ -887,29 +895,28 @@ footer > .container {
 }
 
 .name-card {
+  margin-top: 20px;
+  margin-right: 24px;
+  margin-bottom: 4px;
+  margin-left: 24px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--accent-color);
-
-  margin-top: 20px;
-  margin-right: 24px;
-  margin-bottom: 4px;
-  margin-left: 24px;
 }
 
 .name-text {
+  margin-right: 24px;
+  margin-bottom: 20px;
+  margin-left: 24px;
+
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
-
-  margin-right: 24px;
-  margin-bottom: 20px;
-  margin-left: 24px;
 }
-
 
 /* --- ПОРТФОЛІО ВИПАДАЮЧЕ ВІКНО --- */
 
@@ -963,13 +970,11 @@ transform: translateY(0);
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-
-  transition: opacity 250ms linear, visibility 250ms linear;
-
+  transition: opacity var(--animate), visibility var(--animate);
 }
 
  .backdrop.is-hidden.modal {
-transform: translate(-50%, -50%) scale(0);
+transform: translate(-50%, -50%) scaleY(0);
 border-radius: 50%;
  }
 
@@ -984,9 +989,7 @@ border-radius: 50%;
   background-color: var(--pramyre-text-color);
 box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 border-radius: 4px;
-
-transition: transform 250ms linear;
-
+transition: transform var(--animate);
  }
 
  .modal-close {
@@ -1007,10 +1010,7 @@ background-color: var(--pramyre-text-color);
 border: 1px solid rgba(0, 0, 0, 0.1);
 border-radius: 50%;
  color: #000000;
-
  transition: transform 250ms linear;
-
-
 }
 
 .modal-icons:hover,
